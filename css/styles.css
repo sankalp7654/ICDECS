@@ -1,0 +1,252 @@
+/* Reset %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+* { margin:0; padding:0; }
+html { font-size:16px; /* Fix for Opera */ }
+body          {	font:75%/150% Arial, Helvetica, sans-serif; background-color:#fff; color:#333; text-align:center; }
+#root-wrapper {}
+
+img           { border:0; vertical-align:top; max-width:100%; }
+
+a             { color:#C83D3D; text-decoration:none; }
+a:hover       { text-decoration:none; color:#ca0413; }
+:focus        { outline:0; }
+
+
+/* Headings */
+h1,h2,h3,
+h4,h5,h6      { margin:0 0 10px; font-weight:normal; }
+h1            { font-size:2.6666em;	line-height:1.25em;		/*32px, 40px*/		margin-bottom:20px; }
+h2            { font-size:2em;		line-height:1.25em;		/*24px, 30px*/ }
+h3            { font-size:1.6666em;	line-height:1.2em;		/*20px, 24px*/ }
+h4            { font-size:1.3333em;	line-height:1.25em;		/*16px, 20px*/ }
+h5            { font-size:1.1666em;	line-height:1.1428em;	/*14px, 16px*/ }
+h6            { font-size:1em;		line-height:1.1666em;	/*12px, 14px*/ }
+
+/* Lists */
+ul,ol         { list-style:none; }
+
+/* Tools */
+.hidden       { display:block !important; border:0 !important; margin:0 !important; padding:0 !important; font-size:0 !important; line-height:0 !important; width:0 !important; height:0 !important; overflow:hidden !important; }
+.nobr         { white-space:nowrap !important; }
+.wrap         { white-space:normal !important; }
+.a-left       { text-align:left !important; }
+.a-center     { text-align:center !important; }
+.a-right      { text-align:right !important; }
+.v-top        { vertical-align:top; }
+.v-middle     { vertical-align:middle; }
+.f-left,
+.left         { float:left !important; }
+.f-right,
+.right        { float:right !important; }
+.f-none       { float:none !important; }
+.f-fix        { float:left; width:100%; min-height:147px; position:relative; }
+.no-display   { display:none; }
+.no-margin    { margin:0 !important; }
+.no-padding   { padding:0 !important; }
+.no-bg        { background:none !important; }
+
+/* Base Columns */
+.col-left { float:left; }
+.col-main { float:left; }
+.col-right { float:right; }
+
+/* 1 Column Layout */
+.col1-layout .col-main {}
+
+/* 2 Columns Layout */
+.col2-left-layout .col-main { float:right; }
+.col2-right-layout .col-main {}
+
+/* 3 Columns Layout */
+.col3-layout .col-main {}
+.col3-layout .col-wrapper { float:left; }
+.col3-layout .col-wrapper .col-main { float:right; }
+
+/* Content Columns */
+.col2-set .col-1 { float:left; width:49%; }
+.col2-set .col-2 { float:right; width:49%; }
+.col2-set .col-narrow { width:33%; }
+.col2-set .col-wide { width:65%; }
+
+.col3-set .col-1 { float:left; width:32%; }
+.col3-set .col-2 { float:left; width:32%; margin-left:2%; }
+.col3-set .col-3 { float:right; width:32%; }
+
+.col4-set .col-1 { float:left; width:23.5%; }
+.col4-set .col-2 { float:left; width:23.5%; margin:0 2%; }
+.col4-set .col-3 { float:left; width:23.5%; }
+.col4-set .col-4 { float:right; width:23.5%; }
+
+
+/* Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.wrapper {}
+.page { text-align:left; background-repeat:repeat; background-position:center top; }
+
+.main-container { background-repeat:repeat; background-position:center top; }
+.main { padding:20px 0; min-height:370px; }
+.container { max-width: 891px; width: 100%; }
+
+/* Header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.header-container{ background: url(../images/header-bg.jpg) repeat top center transparent; }
+.header { padding:0; }
+
+
+/* Logo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.header .logo-wrapper { margin:10px 0; }
+.header .logo { display:inline-block; max-width:220px; margin:0; text-decoration:none !important; }
+.header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
+
+/* Quick search
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.search-wrapper-p3 { float: right; }
+.form-search { position:relative; }
+.form-search .input-text {  background:url(../images/search-input-bg.html) no-repeat transparent; border:none; display: block; height:32px; line-height:32px; padding:0px 35px 0 32px; color:#000; background-color:#fff; overflow:hidden; text-overflow:ellipsis; width:250px; }
+
+/* Button */
+.form-search .button { position:absolute; right:0; top:0; }
+.form-search .button span { background:url(../images/search-btn.html) no-repeat transparent; width:44px; height:32px; margin:0px; }
+.form-search .button:hover span { background-color:transparent; }
+.form-search .button span > span { background:none; display:none; }
+
+/* Footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.footer-container,
+.footer-container2 { background-repeat:repeat; background-position:center top; background-attachment: scroll; }
+.footer {
+	width:960px;
+	margin:0 auto;
+	padding:0;
+	text-align:left;
+}
+.footer .item-left { float:left; margin-right:20px; }
+.footer .item-right { float:right; margin-left:20px; }
+
+/* Footer elements */
+.footer .heading,
+#subscribe-form label { margin-bottom:0.625em; font-size:1.3333em; font-weight:normal; }
+
+
+/* Footer top
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.footer-top {}
+
+
+/* Footer primary
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.footer-primary {}
+
+/* Primary footer additional
+-------------------------------------------------------------- */
+.footer-primary-top-spacing {
+	padding-top:20px;
+	padding-bottom:20px;
+	border-bottom:1px solid;
+	border-color:#eee;
+	border-color:rgba(0,0,0, 0.05);
+}
+.footer-primary-bottom-spacing {
+	border-top:1px solid;
+	border-color:#eee;
+	border-color:rgba(0,0,0, 0.05);
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+
+/* Footer secondary
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.footer-secondary {}
+
+
+/* Footer bottom
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.footer-bottom-container {}
+.footer-bottom {
+	padding-top:10px; /* To counterbalance the bottom margin of footer elements */
+}
+
+
+/* Clear %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.clear { clear:both; font-size:0; line-height:0; height:0; } /* Additional simple clearing */
+.clearer:after,
+.header-container:after,
+.header-container .top-container:after,
+.header:after,
+.header .quick-access:after,
+#nav:after,
+.main:after,
+.footer:after,
+.footer-container .bottom-container:after,
+.col-main:after,
+.col2-set:after,
+.col3-set:after,
+.col3-layout .product-options-bottom .price-box:after,
+.col4-set:after,
+.search-autocomplete li:after,
+.block .block-content:after,
+.block .actions:after,
+.block li.item:after,
+.block-poll li:after,
+.block-layered-nav .currently li:after,
+.page-title:after,
+.products-grid:after,
+.products-list li.item:after,
+.box-account .box-head:after,
+.dashboard .box .box-title:after,
+.box-reviews li.item:after,
+.box-tags li.item:after,
+.pager:after,
+.sorter:after,
+.ratings:after,
+.add-to-box:after,
+.add-to-cart:after,
+.product-essential:after,
+.product-view .box-tags .form-add:after,
+.product-view .product-shop .short-description:after,
+.product-view .box-description:after,
+.product-options .options-list li:after,
+.product-options-bottom:after,
+.product-review:after,
+.cart:after,
+.cart-collaterals:after,
+.cart .crosssell li.item:after,
+.opc .step-title:after,
+.checkout-progress:after,
+.multiple-checkout .place-order:after,
+.group-select li:after,
+.form-list li:after,
+.form-list .field:after,
+.buttons-set:after,
+.page-print .print-head:after,
+.advanced-search-summary:after,
+.gift-messages-form .item:after,
+.send-friend .form-list li p:after,
+
+/* Additional clearing */
+.my-account .order-info:after,
+#mini-cart .mini-products-list li.item:after,
+
+.block-related-thumbnails .product:after,
+
+.cart .crosssell:after,
+
+.section-line:after,
+.section-title:after
+
+{ display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+
+.direction-nav { display: none !important; }
