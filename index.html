@@ -44,6 +44,67 @@ var BLANK_IMG = 'http://127.0.0.1/magento/fotowalls/js/spacer.gif';
         window.cookieconsent.initialise(json)
     });
 </script>
+	<style>
+
+
+/* Fixed sidenav, full height */
+
+
+/* Style the sidenav links and the dropdown button */
+.dropdown-btn {
+  padding: 12px 15px;
+  text-decoration: none;
+	font-weight:normal;
+	text-transform: uppercase;
+font-family:proxima_nova_regular;
+  font-size: 17px;
+  color: #ffffff;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: black;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head><body>
 <div id="root-wrapper">  <!-- root-wrapper start -->
     <div class="wrapper"> <!-- wrapper start -->
@@ -89,8 +150,13 @@ var BLANK_IMG = 'http://127.0.0.1/magento/fotowalls/js/spacer.gif';
           <li class="level0  nav-3"> <a href="Commities.html"> <span>COMMITTEES</span> </a> </li>
           <li class="level0  nav-3"> <a href="important-dates.html"> <span>Important Dates</span> </a> </li>
         <li class="level0  nav-7"> <a href="registration.html"> <span>Registration</span> </a> </li>
-        <li class="level0  nav-8"> <a href="Contact.html"> <span>Contact</span> </a> </li>
-        <li class="level0  nav-10"> <a href="GALLERY.html"> <span>Gallery</span> </a> </li>
+		 <li class="level0  nav-7">  <button class="dropdown-btn"><span>Previous Conference</span> <em class="fa fa-caret-down"></em></button>
+  <div class="dropdown-container">
+    <a href="icdecs2011.html">icdecs 2011</a>
+    <a href="icdecs2015.html">icdecs 2015</a>
+			 </div></li>
+<li class="level0  nav-10"> <a href="GALLERY.html"> <span>Gallery</span> </a> </li>
+		<li class="level0  nav-8"> <a href="Contact.html"> <span>Contact</span> </a> </li>
       </ul>
       <div class="clearer"></div>
     </div>
@@ -125,6 +191,23 @@ var BLANK_IMG = 'http://127.0.0.1/magento/fotowalls/js/spacer.gif';
             </li>
         </ul>
     </div>
+					<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
     <script type="text/javascript">
     //&lt;![CDATA[
     jQuery(function($){
@@ -179,7 +262,7 @@ var BLANK_IMG = 'http://127.0.0.1/magento/fotowalls/js/spacer.gif';
 								
                             <p align="justify">The 3rd International Conference on Data Engineering and Communication Systems (ICDECS-2019) will act as a premier forum for researchers and practitioners interested in advances and applications of Data Engineering, Image Processing and Communication Systems. It is an opportunity to present and observe the latest research, results, and ideas in these areas. ICDECS-2019 aims to strengthen relationships between Industries/Organizations, Research Laboratories and Institutions. Data Engineering and Communication Systems deal with the use of techniques, methodologies in the design, development and assessment of information systems for different computing platforms and application environments. The purpose of this conference is to share the research solutions for problems of today’s Communication and Information Systems by identifying new issues and approaches.</p>
 							
-							<h11 class="welcome-title">
+							<h1 class="welcome-title">
 <br>
  <b>Technical Co-Sponsors</b> <br>  </h11><br> <img src="images/vtu1.jpg" height=246 width=175> 
 <font size=5px, color=blue >  </font>  
