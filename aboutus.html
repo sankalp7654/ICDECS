@@ -44,6 +44,63 @@ var BLANK_IMG = 'http://127.0.0.1/magento/fotowalls/js/spacer.gif';
         window.cookieconsent.initialise(json)
     });
 </script>
+	<style>
+
+
+/* Fixed sidenav, full height */
+
+
+/* Style the sidenav links and the dropdown button */
+.dropdown-btn {
+  padding: 12px 15px;
+  text-decoration: none;
+	font-weight:normal;
+	text-transform: uppercase;
+font-family:proxima_nova_regular;
+  font-size: 17px;
+  color: #ffffff;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: black;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head><body>
 <div id="root-wrapper">  <!-- root-wrapper start -->
     <div class="wrapper"> <!-- wrapper start -->
@@ -53,24 +110,12 @@ var BLANK_IMG = 'http://127.0.0.1/magento/fotowalls/js/spacer.gif';
         <div class="page"><!-- page start -->
 
             <div class="header-container" id="top"> <!-- header start -->
-            	<div class="header-top header container clearer">
-        <div class="grid-full">
-                <div class="header-main v-grid-container">
-                        <div class="logo-wrapper grid12-4">
-                                <h1 class="logo"><strong>ICDECS 2019</strong><a title="ICDECS 2019" href="index.html">
-									<left><img src="images/5.jpg" alt="ICDECS 2019" width="1218" height="235" class="logo-img" /></left></a></h1>
-                        </div>
-                        <div class="other-logos grid12-8 clearer">
-                                
-                                
-                                <div class="clearer"></div>
-                                <div class="top-link">
-                   
-                                </div>
-                        </div>
-                </div>
-        </div>
-</div>             </div> <!-- header end -->
+				
+                        <a title="ICDECS 2019" href="index.html"> <img align = "left" src="images/5.jpg" style="width: auto" alt="ICDECS 2019"  width="2500" height="265" class="logo-img " /></a>
+									<div class="clearer"></div>
+                           
+                                               
+          </div> <!-- header end --> <!-- header end -->
 
             <!-- Left Menu -->
             <div class="in-col1">
@@ -101,13 +146,17 @@ var BLANK_IMG = 'http://127.0.0.1/magento/fotowalls/js/spacer.gif';
           <li class="level0  nav-3"> <a href="Commities.html"> <span>COMMITTEES</span> </a> </li>
           <li class="level0  nav-3"> <a href="important-dates.html"> <span>Important Dates</span> </a> </li>
         <li class="level0  nav-7"> <a href="registration.html"> <span>Registration</span> </a> </li>
-
-        <li class="level0  nav-8"> <a href="Contact.html"> <span>Contact</span> </a> </li>
-        <li class="level0  nav-10"> <a href="GALLERY.html"> <span>Gallery</span> </a> </li>
+		 <li class="level0  nav-7">  <button class="dropdown-btn"><span>Previous Conference</span> <em class="fa fa-caret-down"></em></button>
+  <div class="dropdown-container">
+    <a href="icdecs2011.html">icdecs 2011</a>
+    <a href="icdecs2015.html">icdecs 2015</a>
+			 </div></li>
+<li class="level0  nav-10"> <a href="GALLERY.html"> <span>Gallery</span> </a> </li>
+		<li class="level0  nav-8"> <a href="Contact.html"> <span>Contact</span> </a> </li>
       </ul>
       <div class="clearer"></div>
     </div>
-    <script type="text/javascript">
+<script type="text/javascript">
         jQuery( "#mobnav-trigger" ).click(function() {
           jQuery( "#menu-option" ).slideToggle( "slow", function() {
             // Animation complete.
@@ -124,24 +173,87 @@ var BLANK_IMG = 'http://127.0.0.1/magento/fotowalls/js/spacer.gif';
             </div>
 
             
+					<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
 
-			<div class="main-container col2-left-layout"> <!-- content start -->
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+    <script type="text/javascript">
+    //&lt;![CDATA[
+    jQuery(function($){
+    jQuery('.the-slideshow').flexslider({
+        namespace:          "",
+        animation:          'fade',
+        slideshow:           true,
+        easing:             'easeInOutCubic',
+        useCSS:             false,
+        animationLoop:      1,
+        smoothHeight:       0,
+        slideshowSpeed:     5000,
+        animationSpeed:     600,
+        pauseOnHover:       1           });
+    });
+    //]]&gt;
+    jQuery(document).ready(function(){
+        /* Blank Paging Number */
+        jQuery(".control-nav.control-paging li a").text(" ");
+
+        /* Wrap container in paging-control */
+        jQuery( "ol.control-nav" ).wrap( "<div class='control-nav-wrap container'></div>" );
+
+        //var x=jQuery(".slides img").offset();
+        //var y= x.top;
+        //jQuery(".slide_content").offset({top:y})
+
+        //jQuery(window).resize(function(){
+            //var x=jQuery(".slides img").offset();
+            //var y= x.top;
+            //jQuery(".slide_content").offset({top:y})
+        /*  jQuery(".slide_content").each(function(){
+                jQuery(this).offset({top:y})
+              });*/
+        //});
+
+        if (jQuery(window).width() > 960 ){
+            jQuery("#mobnav").hide();
+            jQuery("#menu-option").show();
+        }
+    });
+    </script>
+</div>             </div> <!-- slideshow end -->
+
+			<div class="main-container col2-left-layout "> <!-- content start -->
                 <div class="main container show-bg">
                     <div class="col-main grid12-8 grid-col2-main in-col2">
                         <div class="std">
                             <div class="welcome-text">
-                            <h1 class="welcome-title">About RNSIT</h1>
+								
+                            <h1 class="welcome-title" align="left">About RNSIT</h1>
                            
                             <p align="justify"><font color="black">
 RNSIT, an Institute with a difference, was established in the year 2001 by Dr. R N Shetty, a well known industrialist, philanthropist and an educationist. It is built on a 160-acre clean-green campus and managed by a highly committed and proactive management, with a mission to impart high quality education, enabling graduates to excel in their career. The Institution offers seven UG programmes, two M.Tech programmes, MCA and MBA Programme. Six Departments have been recognized by VTU as Research and Development Centers.<br>	All the departments are harmonized, with highly qualified and dedicated teaching faculty. RNSIT is rated as one of the best engineering teaching institutions by the public. One of the achievements of RNSIT is its record in placements with more than 98% placements. The Institution works with a number of innovative methods in administration, service conditions and teaching.<br>Strong and Disciplined Work Culture is the hallmark of RNSIT. Due encouragement is given for the holistic development of the individual. The institution organizes FDPs, National/International Conferences and Workshops on regular basis for the benefit of faculty members.</p></div>
 							
 							<div class="welcome-text">
-                            <h1 class="welcome-title">About Departments</h1>
+                            <h1 class="welcome-title" align="left">About Departments</h1>
                            
                             <p align="justify"><font color="black">
 The   Departments   of   Computer    Science & Engineering and Information Science & Engineering were established in the year 2001 right from the inception of the Institution with an objective of imparting quality technical education in the IT field. The Departments house state-of-the-art laboratories and boast of well trained, committed & experienced teaching faculty who emphasize the theoretical and practical applications of computation and computer systems to the needs of society. <br> <br> The Departments are making all efforts to align with the unique spirit of RNSIT by promoting excellence in Teaching, Research and Consultancy Services covering the fundamentals as well as applied aspects of Computer Science and IT.</p></div>
                         </div>
                         
+                       
+
                         <div class="clearer"></div>
 
                         <!-- Mobile Tiwter -->
@@ -158,9 +270,10 @@ The   Departments   of   Computer    Science & Engineering and Information Scien
                 <div class="footer-primary-container section-container">
                     <div class="footer-primary footer container">
                         <div class="grid-full footer-links">
-                            <p><strong>ICDECS - </strong>International Conference on Data Engineering and Communication Systems</p>
-                            | <strong>ICDECS Event Terms and Conditions </strong></p>
+                            <p><strong>ICDECS -2019 </strong>International Conference on Data Engineering and Communication Systems</p>
+                        | <a href="https://www.ieee.org/conferences/event-terms-and-conditions.html"><strong>ICDECS Event Terms and Conditions </strong></a></p>
 <!--                            <p><a href="#"><strong>Contact</strong></a> | <a href="https://www.ieee.org/about/corporate/governance/p9-26.html"><strong>IEEE Nondiscrimination Policy </strong></a> | <strong>Copyright IEEE Signal Processing Society</strong> - All Rights Reserved.</p>-->
+                            
                         </div>
                     </div>
                 </div>            </div> <!-- footer end -->
