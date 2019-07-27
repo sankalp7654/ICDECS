@@ -74,36 +74,36 @@
 */
 /* Padding
 -------------------------------------------------------------- */
-.accordion-style1 li a { padding:5px 10px; }
-.accordion-style1 li li a { padding-left:20px; }
-.accordion-style1 li li li a { padding-left:35px; }
-.accordion-style1 li li li li a { padding-left:50px; }
+.accordion-style1 .accordion-style2 li a { padding:5px 10px; }
+.accordion-style1 .accordion-style2 li li a { padding-left:20px; }
+.accordion-style1 .accordion-style2 li li li a { padding-left:35px; }
+.accordion-style1 .accordion-style2 li li li li a { padding-left:50px; }
 
 /* Space for openner if item has children.
    Space has to be a few pixels wider than openner */
-.accordion-style1 li.parent > a { padding-right:33px; }
+.accordion-style1 .accordion-style2 li.parent > a { padding-right:33px; }
 
 /* Misc
 -------------------------------------------------------------- */
-.accordion-style1 li a {
+.accordion-style1 .accordion-style2 li a {
 	border-bottom-color:#eee;
 	border-bottom:1px solid rgba(0,0,0,0.06);
 	font-size:1em; /*12px*/
 	line-height:1.5em; /*18px*/
 }
-.accordion-style1 li a:hover {
+.accordion-style1 .accordion-style2 li a:hover {
 	background-color:rgba(0,0,0, 0.03);
 }
 
 /* Opener
 -------------------------------------------------------------- */
-.accordion-style1 .opener {
+.accordion-style1 .accordion-style2 .opener {
 	width:28px;
 	height:28px;
 	/*background-image:url(../../../images/infortis/ultra-megamenu/opener-small.png);*/
 	background-color:rgba(0,0,0, 0.03);
 }
-.accordion-style1 .opener:hover {
+.accordion-style1 .accordion-style2 .opener:hover {
 	background-color:rgba(0,0,0, 0.10);
 	background-image: url(../images/infortis/ultra-megamenu/opener-w.html);
 }
@@ -112,7 +112,7 @@
 /*.accordion-style1 li.active > .opener {
 	background-image:url(../../../images/infortis/ultra-megamenu/opener-small-active.png);
 }*/
-.accordion-style1 li.active > .opener:hover {
+.accordion-style1 .accordion-style2 li.active > .opener:hover {
 	background-image:url(../images/infortis/ultra-megamenu/opener-active-w.html);
 }
 

@@ -52,7 +52,7 @@ var BLANK_IMG = 'http://127.0.0.1/magento/fotowalls/js/spacer.gif';
 
 /* Style the sidenav links and the dropdown button */
 .dropdown-btn {
-  padding: 12px 15px;
+  padding: 15px;
   text-decoration: none;
 	font-weight:normal;
 	text-transform: uppercase;
@@ -62,20 +62,22 @@ font-family:proxima_nova_regular;
   display: block;
   border: none;
   background: none;
-  width: 100%;
+  width: 275px ;
   text-align: left;
   cursor: pointer;
   outline: none;
 }
 
 /* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
+ .dropdown-btn:hover {
   color: #f1f1f1;
+	width:275px 
 }
+	
 
 /* Main content */
 .main {
-  margin-left: 200px; /* Same as the width of the sidenav */
+  margin-left: 100px; /* Same as the width of the sidenav */
   font-size: 20px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
@@ -90,7 +92,7 @@ font-family:proxima_nova_regular;
 .dropdown-container {
   display: none;
   background-color: #262626;
-  padding-left: 8px;
+  padding-left: 0px;
 }
 
 /* Optional: Style the caret down icon */
@@ -115,7 +117,7 @@ font-family:proxima_nova_regular;
 
             <div class="header-container" id="top"> <!-- header start -->
 				
-                        <a title="ICDECS 2019" href="index.html"> <img align = "left" src="images/5.jpg" style="width: auto" alt="ICDECS 2019"  width="2500" height="265" class="logo-img " /></a>
+                        <a title="ICDECS 2019" href="index.html"> <img align = "left" src="images/websiteHeader.png" style="width: auto" alt="ICDECS 2019"  width="100%" height="100%" style="box-shadow: 0 2px 2px 0 rgba(0,0,0,0.5);" class="logo-img " /></a>
 									<div class="clearer"></div>
                            
                                                
@@ -123,8 +125,8 @@ font-family:proxima_nova_regular;
 
             <!-- Left Menu -->
             <div class="in-col1">
-                <div class="sidebar-wrap container">
-                    <div class="col-left sidebar grid12-4 in-sidebar">
+                <div class="sidebar-wrap container-fluid ">
+                    <div class="col-left  sidebar grid12-4 in-sidebar">
                         <!--
 	------------------
 	left side menu 	
@@ -143,15 +145,15 @@ font-family:proxima_nova_regular;
     </div>
     <div class="clearer"></div>
     <div id="menu-option" class="menu-contain block-content">
-      <ul class="accordion accordion-style1 vertnav vertnav-side clearer">
+      <ul class="accordion accordion-style2 vertnav vertnav-side clearer">
         <li class="level0 nav-1 active first"> <a href="index.html"> <span>Home</span> </a> </li>
 		<li class="level0  nav-2"> <a href="aboutus.html"> <span>About us</span> </a> </li>
         <li class="level0  nav-2"> <a href="call-for-papers.html"> <span>Call for Papers</span> </a> </li>
           <li class="level0  nav-3"> <a href="Commities.html"> <span>COMMITTEES</span> </a> </li>
           <li class="level0  nav-3"> <a href="important-dates.html"> <span>Important Dates</span> </a> </li>
         <li class="level0  nav-7"> <a href="registration.html"> <span>Registration</span> </a> </li>
-		 <li class="level0  nav-7">  <button class="dropdown-btn"><span>Previous Conference</span> <em class="fa fa-caret-down"></em></button>
-  <div class="dropdown-container">
+		 <li class="level0  nav-7">  <button class="dropdown-btn"><span>Previous Conference</span><em class="fa fa-caret-down"></em></button>
+  <div class="">
     <a href="icdecs2011.html">icdecs 2011</a>
     <a href="icdecs2015.html">icdecs 2015</a>
 			 </div></li>
@@ -181,14 +183,45 @@ font-family:proxima_nova_regular;
     <div class="the-slideshow gen-slider-arrows2 gen-slider-pager1 gen-slider-pager1-pos-bottom-right grid-full no-gutter  ">
         <ul class="slides">
             <li class="slide">
-                <img src="images/home_slide_1_dsw.jpg">
+                <img src="images/1.webp" height="593" width="1910">
             </li>
             <li class="slide" style="display: none;">
-                <img src="images/home_slide_4_dsw.jpg">
+                <img src="images/2.jpg" height="593" width="1910">
             </li>
             <li class="slide" style="display: none;">
-                <img src="images/home_slide_3_dsw.jpg">
+                <img src="images/3.jpg" height="593" width="1910">
             </li>
+			<li class="slide" style="display: none;">
+                <img src="images/4.webp" height="593" width="1910">
+            </li>
+			<li class="slide" style="display: none;">
+                <img src="images/5.jpeg" height="593" width="1910">
+            </li>
+			<li class="slide" style="display: none;">
+                <img src="images/6.jpg" height="593" width="1910">
+            </li>
+			<li class="slide" style="display: none;">
+                <img src="images/7.jpg" height="593" width="1910">
+            </li>
+			<li class="slide" style="display: none;">
+                <img src="images/8.webp" height="593" width="1910">
+            </li>
+			<li class="slide" style="display: none;">
+                <img src="images/9.jpg" height="593" width="1910">
+            </li>
+			<li class="slide" style="display: none;">
+                <img src="images/10.jpg" height="593" width="1910">
+            </li>
+			<li class="slide" style="display: none;">
+                <img src="images/11.jpg" height="593" width="1910">
+            </li>
+			<li class="slide" style="display: none;">
+                <img src="images/12.jpg" height="593" width="1910">
+            </li>
+			<li class="slide" style="display: none;">
+                <img src="images/13.jpg" height="593" width="1910">
+            </li>
+			
         </ul>
     </div>
 					<script>
@@ -264,7 +297,7 @@ for (i = 0; i < dropdown.length; i++) {
 							
 							<h1 class="welcome-title">
 <br>
- <b>Technical Co-Sponsors</b> <br>  </h11><br> <img src="images/vtu1.jpg" height=246 width=175> 
+ <b>Technical Co-Sponsors</b> <br>  </h11> <img src="images/vtu1.jpg" height=246 width=175> 
 <font size=5px, color=blue >  </font>  
 <style>
 
@@ -273,7 +306,7 @@ for (i = 0; i < dropdown.length; i++) {
         cursor:pointer;
         position:absolute;
         left:340px;
-        top:530px;
+        top:470px;
     }
 </style>	
 <!--<img src="img/team/and.png" height=20 width=20>  &nbsp;&nbsp; &nbsp;&nbsp; -->
